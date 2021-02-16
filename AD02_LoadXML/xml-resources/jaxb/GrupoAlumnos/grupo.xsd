@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="grupo" type="grupo"/>
+
+  <xs:complexType name="grupo">
+    <xs:sequence>
+      <xs:element name="listaAlumnos" type="alumno" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="alumno">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" minOccurs="0"/>
+      <xs:element name="nombrePadre" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="notaMedia" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

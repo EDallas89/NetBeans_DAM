@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/edallas/NetBeansProjects/AD02_LoadXML/../../Descargas/grupo.xsd" uri="xml-resources/jaxb/GrupoAlumnos/grupo.xsd"/>
+</catalog>
