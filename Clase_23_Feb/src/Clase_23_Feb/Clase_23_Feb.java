@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AD03LoadBBDD;
+package Clase_23_Feb;
 
 import generated.Clientes;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.io.IOException;
  *
  * @author edallas
  */
-public class AD03LoadBBDD {
+public class Clase_23_Feb {
 
     /**
      * @param args the command line arguments
@@ -24,16 +24,16 @@ public class AD03LoadBBDD {
     public static void main(String[] args) throws IOException,  Exception {
         System.out.println("\n\n********** COMENZAMOS  **********\n\n");
         
-        /**
+        
         // cargamos el json desde la web
         CreateFromURL lector = new CreateFromURL();
         Clientes lista = lector.carga(); 
-        */
+        
         GrabadorBBDD grabador = new GrabadorBBDD();
-        /**
-         * grabador.creaTabla(); // creamos la tabla cliente
+        
+        grabador.creaTabla(); // creamos la tabla cliente
         grabador.grabaEnBBDD(lista); // insertamos los registros del json
-        */
+        
         
         double suma = grabador.calculaSuma();
         
