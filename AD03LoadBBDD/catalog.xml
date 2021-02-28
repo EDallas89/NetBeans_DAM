@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/edallas/NetBeansProjects/Clase_23-02/clientes.xsd.xml" uri="xml-resources/jaxb/Clientes/clientes.xsd.xml.xsd"/>
+    <system systemId="file:/home/edallas/NetBeansProjects/AD03LoadBBDD/clientes.xsd.xml" uri="xml-resources/jaxb/Clientes/clientes.xsd.xml.xsd"/>
+</catalog>
