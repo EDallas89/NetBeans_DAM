@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<clientes>
+    <listaClientes>
+        <nombre>Milagros</nombre>
+        <id>4</id>
+        <saldo>-13.0</saldo>
+    </listaClientes>
+</clientes>

@@ -18,7 +18,7 @@ public class AD03_QueryToXML {
     public static void main(String[] args) throws IOException,  Exception {
         CargadorBBDD  cargador = new CargadorBBDD();
         cargador.cargaSaldoNegativo();
-        //cargador.saveXML();
+        cargador.saveXML();
     }
     
 }

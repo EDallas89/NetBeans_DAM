@@ -9,10 +9,13 @@ package ad03_querytoxml;
 //import generated.Clientes;
 import generated.Cliente;
 import generated.Clientes;
+import java.io.FileOutputStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
 
 /**
  *
@@ -45,6 +48,22 @@ public class CargadorBBDD {
         }
        
         if(this.bd.HuboError())
-            System.out.println("ERROR AL CARGAR EL CLIENTE: " + this.bd.getMensajeError());
+            System.out.println("ERROR AL CARGAR LA LISTA DE CLIENTES: " + this.bd.getMensajeError());
+    }
+    
+    public void saveXML(){
+        try {
+            JAXBContext context = JAXBContext.newInstance(Clientes.class);
+            Marshaller convertidor = context.createMarshaller();
+            
+            convertidor.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            convertidor.setProperty(Marshaller.JAXB_ENCODING, "utf-8");
+            convertidor.marshal(clientes, System.out);
+            
+            FileOutputStream fos =  new FileOutputStream( "./fichero.xml");
+            convertidor.marshal(clientes, fos);
+        } catch (Exception ex) {
+            System.out.println("ERROR AL GUARDAR EL FICHERO: " + ex);
+        }
     }
 }
