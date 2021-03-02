@@ -56,12 +56,12 @@ public class CargadorBBDD {
             JAXBContext context = JAXBContext.newInstance(Clientes.class);
             Marshaller convertidor = context.createMarshaller();
             
-            convertidor.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            convertidor.setProperty(Marshaller.JAXB_ENCODING, "utf-8");
-            convertidor.marshal(clientes, System.out);
+            convertidor.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true); // Formatemos el texto a imprimir
+            convertidor.setProperty(Marshaller.JAXB_ENCODING, "utf-8"); // Seleccionamos el sistema UTF-8
+            convertidor.marshal(clientes, System.out);  // Imprime por consola
             
             FileOutputStream fos =  new FileOutputStream( "./fichero.xml");
-            convertidor.marshal(clientes, fos);
+            convertidor.marshal(clientes, fos); // Imprime en el fichero
         } catch (Exception ex) {
             System.out.println("ERROR AL GUARDAR EL FICHERO: " + ex);
         }
